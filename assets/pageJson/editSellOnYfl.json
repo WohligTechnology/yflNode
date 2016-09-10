@@ -1,0 +1,313 @@
+{
+    "title": "Edit Sell On YFL Details",
+    "jsonPage": "viewSellOnYfl",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Store Name",
+        "type": "text",
+        "model": "storeName",
+        "tableRef": "storeName",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Name of contact person",
+        "type": "text",
+        "tableRef": "contactPerson",
+        "model": "contactPerson",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Phone Number - Landline and Mobile",
+        "type": "text",
+        "tableRef": "phoneNumber",
+        "model": "phoneNumber",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Primary Category",
+        "type": "text",
+        "tableRef": "primaryCategory",
+        "model": "primaryCategory",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Address Line 1",
+        "type": "text",
+        "tableRef": "address1",
+        "model": "address1",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Address Line 2",
+        "type": "text",
+        "tableRef": "address2",
+        "model": "address2",
+        "id": "input6",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "City",
+        "type": "text",
+        "tableRef": "city",
+        "model": "city",
+        "id": "input8",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Pincode",
+        "type": "text",
+        "tableRef": "pincode",
+        "model": "pincode",
+        "id": "input9",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "State",
+        "type": "text",
+        "tableRef": "state",
+        "model": "state",
+        "id": "input10",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Country",
+        "type": "text",
+        "tableRef": "country",
+        "model": "country",
+        "id": "input11",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "PAN number",
+        "type": "text",
+        "tableRef": "pan",
+        "model": "pan",
+        "id": "input12",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "VAT / TIN Number",
+        "type": "text",
+        "tableRef": "vatTin",
+        "model": "vatTin",
+        "id": "input13",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "CST number",
+        "type": "image",
+        "tableRef": "cst",
+        "model": "cst",
+        "id": "input14",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Don't have VAT/CST?",
+        "type": "checkbox",
+        "tableRef": "isVatCst",
+        "model": "isVatCst",
+        "id": "input15",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Books, Movies & Games",
+        "type": "select",
+        "tableRef": "booksMoviesGames",
+        "model": "booksMoviesGames",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "Books",
+            "name": "Books"
+        }, {
+            "value": "Movies",
+            "name": "Movies"
+        }, {
+            "value": "Musical Instruments",
+            "name": "Musical Instruments"
+        }, {
+            "value": "Music",
+            "name": "Music"
+        }, {
+            "value": "Video Games",
+            "name": "Video Games"
+        }]
+    }, {
+        "name": "Clothing, Shoes & Jewelry",
+        "type": "select",
+        "tableRef": "clothingShoesJewelry",
+        "model": "clothingShoesJewelry",
+        "id": "input17",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "Clothing",
+            "name": "Clothing"
+        }, {
+            "value": "Shoes",
+            "name": "Shoes"
+        }, {
+            "value": "Watches",
+            "name": "Watches"
+        }, {
+            "value": "Jewelery",
+            "name": "Jewelery"
+        }, {
+            "value": "Luggage",
+            "name": "Luggage"
+        }]
+    }, {
+        "name": "Beauty, Health & Groceries",
+        "type": "select",
+        "tableRef": "beautyHealthGroceries",
+        "model": "beautyHealthGroceries",
+        "id": "input18",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "Beauty",
+            "name": "Beauty"
+        }, {
+            "value": "Grocery",
+            "name": "Grocery"
+        }, {
+            "value": "Health",
+            "name": "Health"
+        }, {
+            "value": "Personal Care Appliances",
+            "name": "Personal Care Appliances"
+        }]
+    }, {
+        "name": "Yoga Products",
+        "type": "text",
+        "tableRef": "yogaProducts",
+        "model": "yogaProducts",
+        "id": "input19",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Other",
+        "type": "select",
+        "tableRef": "other",
+        "model": "other",
+        "id": "input20",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Where do you get products from?",
+        "type": "select",
+        "tableRef": "productsFrom",
+        "model": "productsFrom",
+        "id": "input18",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "1",
+            "name": "I manufacture them"
+        }, {
+            "value": "2",
+            "name": "I resell product that I buy"
+        }, {
+            "value": "3",
+            "name": "I sell products manufactured from me"
+        }, {
+            "value": "4",
+            "name": "I import them"
+        }]
+    }, {
+        "name": "What is your annual turnover?",
+        "type": "select",
+        "tableRef": "annualTurnover",
+        "model": "annualTurnover",
+        "id": "input18",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "1",
+            "name": "Less than 1 Lakh"
+        }, {
+            "value": "2",
+            "name": "Between 1 Lakh and 10 Lakh"
+        }, {
+            "value": "3",
+            "name": "Between 10 Lakh and 1 crore"
+        }, {
+            "value": "4",
+            "name": "More then 1 crore"
+        }, {
+            "value": "5",
+            "name": "I don`t know"
+        }]
+    }, {
+        "name": "How many products do you sell?",
+        "type": "select",
+        "tableRef": "productSell",
+        "model": "productSell",
+        "id": "input18",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "1-10",
+            "name": "1-10"
+        }, {
+            "value": "11-100",
+            "name": "11-100"
+        }, {
+            "value": "101-500",
+            "name": "101-500"
+        }, {
+            "value": "More than 500",
+            "name": "More than 500"
+        }, {
+            "value": "I don`t know",
+            "name": "I don`t know"
+        }]
+    }, {
+        "name": "Do you sell on other websites?",
+        "type": "select",
+        "tableRef": "sellOtherWebsite",
+        "model": "sellOtherWebsite",
+        "id": "input20",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Please provide url of any product from the other website.",
+        "type": "text",
+        "tableRef": "url",
+        "model": "url",
+        "id": "input18",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitSellOnYfl"
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": "page({jsonName:'viewSellOnYfl'})"
+    }],
+    "apiCall": {
+        "url": "SellOnYfl/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "SellOnYfl/getOne",
+        "params": "_id"
+    }
+
+}

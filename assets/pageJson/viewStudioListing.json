@@ -1,0 +1,87 @@
+{
+    "title": "Studio Listing",
+    "desciption": "",
+    "pageType": "view",
+    "sendIdWithCreate": true,
+      "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "isSort": "",
+        "tableRef": "name"
+    }, {
+        "name": "Image",
+        "isSort": "",
+        "tableRef": "images",
+        "type": "image"
+    }, {
+        "name": "Street",
+        "isSort": "",
+        "tableRef": "location.street"
+    }, {
+        "name": "City",
+        "isSort": "",
+        "tableRef": "location.city"
+    }, {
+        "name": "State",
+        "isSort": "",
+        "tableRef": "location.state"
+    },{
+        "name": "Country",
+        "isSort": "",
+        "tableRef": "location.country"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editStudioListing",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "StudioListing/getOne"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete ",
+        "content": "Are you sure you want to delete tag?",
+        "api": "StudioListing/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "button": [{
+        "name": "excelexport",
+        "icon": "print",
+        "color": "blue",
+        "action": "excelexport"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+    "excel":[{
+        "name": "excel",
+        "icon": "excel",
+        "color": "green",
+        "title": "Excel",
+        "action": "apiCallConfirm",
+        "api": "PersonalCampaign/excelDownload"
+    }],
+    "filter": [{
+        "name": "category",
+        "url": "http://chaitalee.com/expertuser/getAll"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+    "apiCall": {
+        "url": "StudioListing/search",
+        "params": "_id"
+    },
+    "createButtonState": "page({jsonName:'createStudioListing'})"
+}

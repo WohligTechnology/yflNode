@@ -1,0 +1,202 @@
+{
+    "title": "Create Teacher Collaboration Details",
+    "jsonPage": "viewTeacherCollaboration",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "First Name",
+        "type": "text",
+        "model": "firstName",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Middle Name",
+        "type": "text",
+        "tableRef": "middleName",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Last Name",
+        "type": "text",
+        "tableRef": "lastName",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Address",
+        "type": "textarea",
+        "tableRef": "address",
+        "id": "input7",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+
+    }, {
+        "name": "Present Age",
+        "type": "text",
+        "tableRef": "age",
+        "model": "age",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+
+    }, {
+        "name": "Nationally",
+        "type": "text",
+        "tableRef": "nationally",
+        "id": "input8",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+
+        "name": "Phome Number",
+        "type": "text",
+        "tableRef": "phoneNumber",
+        "id": "input9",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Are you a certified yoga teacher? If yes, please specify certification details.",
+        "type": "text",
+        "tableRef": "certifiedYogaTeacher",
+        "id": "input10",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Other qualifications",
+        "type": "text",
+        "tableRef": "otherQualifications",
+        "id": "input11",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+
+    }, {
+        "name": "Professional Experience (Years, months)",
+        "type": "text",
+        "tableRef": "professionalExperience",
+        "id": "input13",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Specialisation (Style of Yoga you teach)",
+        "type": "text",
+        "tableRef": "specialisation",
+        "id": "input14",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Kindly select the level you teach from the below options.",
+        "type": "select",
+        "tableRef": "teachingLevel",
+        "id": "input15",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "Beginner",
+            "name": "Beginner"
+        }, {
+            "value": "Intermediate",
+            "name": "Intermediate"
+        }, {
+            "value": "Advanced",
+            "name": "Advanced"
+        } {
+            "value": "Open level",
+            "name": "Open level"
+        }]
+    }, {
+        "name": "How much do you charge per session?",
+        "type": "text",
+        "tableRef": "chargePerSession",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Studios you are affiliated with",
+        "type": "text",
+        "tableRef": "affiliatedStudios",
+        "id": "input17",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Briefly mention about your experience in Learning/Teaching Yoga.",
+        "type": "textarea",
+        "tableRef": "expInYoga",
+        "id": "input18",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Do you have an official website? If yes, please provide your website address.",
+        "type": "text",
+        "tableRef": "officialWebsiteAddress",
+        "id": "input12",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Please provide a link to your Facebook Page.",
+        "type": "text",
+        "tableRef": "facebook",
+        "id": "input19",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Please provide a link to your Instagram account.",
+        "type": "text",
+        "tableRef": "instagram",
+        "id": "input20",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Are you active on any other social media platforms? (Pinterest, Youtube, Twitter, Google +, etc)",
+        "type": "text",
+        "tableRef": "isActiveSocial",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Do you use a particular platform for your class scheduling?",
+        "type": "select",
+        "tableRef": "usePlatform",
+        "id": "input15",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Please share available hours and days from your schedule when you would be able to accommodate new classes.",
+        "type": "text",
+        "tableRef": "freeSchedule",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Feedback / Queries",
+        "type": "text",
+        "tableRef": "feedback",
+        "id": "input17",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitTeacherCollaboration"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewTeacherCollaboration'})"
+    }],
+
+    "apiCall": {
+        "url": "TeacherCollaboration/save"
+    }
+}

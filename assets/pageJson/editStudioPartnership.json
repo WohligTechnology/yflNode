@@ -1,0 +1,216 @@
+{
+    "title": "Edit Studio Partnership",
+    "jsonPage": "viewStudioPartnership",
+    "description": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Id",
+        "type": "hidden",
+        "tableRef": "_id",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "_id"
+    }, {
+        "name": "Name of your Organisation",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Organisation Name",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "name"
+    },{
+        "name": "Give a brief description about your organisation",
+        "type": "textarea",
+        "tableRef": "desc",
+        "placeholder": "Give a brief",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "desc"
+    },{
+        "name": "Contact Person",
+        "type": "text",
+        "tableRef": "contactPerson",
+        "placeholder": "Contact Person",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "contactPerson"
+    },{
+        "name": "Phone",
+        "type": "text",
+        "tableRef": "phone",
+        "placeholder": "Phone",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "phone"
+    },{
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "placeholder": "Email",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "email"
+    },{
+        "name": "Address",
+        "type": "textarea",
+        "tableRef": "address",
+        "placeholder": "Address",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "address"
+    },{
+        "name": "City",
+        "type": "text",
+        "tableRef": "city",
+        "placeholder": "City",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "city"
+    },{
+        "name": "Amenities Offered",
+        "type": "textarea",
+        "tableRef": "amenities",
+        "placeholder": "Amenities",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "amenities"
+    },{
+        "name": "Style of Yoga",
+        "type": "textarea",
+        "tableRef": "styleOfYoga",
+        "placeholder": "Style of Yoga",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "styleOfYoga"
+    },{
+        "name": "Type of Yoga description",
+        "type": "textarea",
+        "tableRef": "typeOfYoga",
+        "placeholder": "Description",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "typeOfYoga"
+    },{
+        "name": "Please list the teachers/instructors at your studio",
+        "type": "textarea",
+        "tableRef": "teachersInstructors",
+        "placeholder": "teachers/instructors",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "teachersInstructors"
+    },{
+        "name": "Provide the class level",
+        "type": "text",
+        "tableRef": "level",
+        "placeholder": "Class level",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "level"
+    },{
+        "name": "Official Website",
+        "type": "select",
+        "tableRef": "officialWebsite",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "model": "officialWebsite",
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    },{
+        "name": "Website Address",
+        "type": "text",
+        "tableRef": "websiteAddress",
+        "placeholder": "Website Address",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "websiteAddress"
+    },{
+        "name": "Provide a link to your Facebook",
+        "type": "text",
+        "tableRef": "facebook",
+        "placeholder": "link to your Facebook",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "facebook"
+    },{
+        "name": "Provide a link to your Instagram",
+        "type": "text",
+        "tableRef": "instagram",
+        "placeholder": "link to your Instagram",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "instagram"
+    },{
+        "name": "Other  platforms? (Pinterest, Youtube, Twitter, Google +, etc)",
+        "type": "textarea",
+        "tableRef": "isActiveSocial",
+        "placeholder": "social media",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "isActiveSocial"
+    },{
+        "name": "Do you have other branches",
+        "type": "select",
+        "tableRef": "branches",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }],
+        "model": "branches"
+    },{
+        "name": "Address for your branches",
+        "type": "textarea",
+        "tableRef": "branchesAddress",
+        "placeholder": "Address for your branches",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "branchesAddress"
+    }
+  ],
+    "action": [{
+        "name": "submit",
+        "action": "submitStudioPartnership"
+    }, {
+        "name": "cancel",
+        "action": "cancelStudioPartnership",
+        "stateName": "page({jsonName:'viewStudioPartnership'})"
+    }],
+    "apiCall": {
+        "url": "StudioPartnership/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "StudioPartnership/getOne",
+        "params": "_id"
+    }
+
+}

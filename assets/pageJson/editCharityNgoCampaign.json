@@ -1,0 +1,177 @@
+{
+    "title": "Edit Charity/Ngo Campaign Details",
+    "jsonPage": "viewCharityNgoCampaign",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "NGO Name",
+        "type": "text",
+        "tableRef": "ngoName",
+        "model": "ngoName",
+        "id": "input7",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Address",
+        "type": "textarea",
+        "tableRef": "address",
+        "model": "address",
+        "id": "input7",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "City",
+        "type": "text",
+        "tableRef": "city",
+        "model": "city",
+        "id": "input8",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Zipcode",
+        "type": "text",
+        "tableRef": "zipcode",
+        "model": "zipcode",
+        "id": "input9",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "State",
+        "type": "text",
+        "tableRef": "state",
+        "model": "state",
+        "id": "input10",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Country",
+        "type": "text",
+        "tableRef": "country",
+        "model": "country",
+        "id": "input11",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "First Name",
+        "type": "text",
+        "model": "firstName",
+        "tableRef": "firstName",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Middle Name",
+        "type": "text",
+        "tableRef": "middleName",
+        "model": "middleName",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Last Name",
+        "type": "text",
+        "tableRef": "lastName",
+        "model": "lastName",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "model": "email",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Mobile Number",
+        "type": "text",
+        "tableRef": "mobileNumber",
+        "model": "mobileNumber",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Land Line Number",
+        "type": "text",
+        "tableRef": "landlineNumber",
+        "model": "landlineNumber",
+        "id": "input6",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Campaign Title (What are you raising funds for?)",
+        "type": "text",
+        "tableRef": "title",
+        "model": "title",
+        "id": "input12",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Goal (How much do you want to raise?)",
+        "type": "text",
+        "tableRef": "goal",
+        "model": "goal",
+        "id": "input13",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Campaign picture (Upload) (This is going to be the face of your campaign. Upload a non-pixelated, clear image preferably. Ideal Size: 700x400. If it's bigger, don’t worry, we’ll crop it for you.)",
+        "type": "image",
+        "tableRef": "picture",
+        "model": "picture",
+        "id": "input14",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "End Date (Choose a campaign end date)",
+        "type": "date",
+        "tableRef": "endDate",
+        "model": "endDate",
+        "id": "input15",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Cause",
+        "type": "text",
+        "tableRef": "cause",
+        "model": "cause",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Short Description (Explain your campaign in short)",
+        "type": "text",
+        "tableRef": "description",
+        "model": "description",
+        "id": "input17",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Campaign Story (Write a story that does justice to your cause and makes the supporter reach the donate button.Don't get overwhelmed, if you feel stuck. Follow these steps:1. Talk about who you're raising funds for, be it yourself or your loved one.2. Explain why you're raising funds.3. Make an appeal to your supporters.Avoid pasting information directly from a Word document.)",
+        "type": "textarea",
+        "tableRef": "story",
+        "model": "story",
+        "id": "input18",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitCharityNgoCampaign"
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": "page({jsonName:'viewCharityNgoCampaign'})"
+    }],
+    "apiCall": {
+        "url": "CharityNgoCampaign/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "CharityNgoCampaign/getOne",
+        "params": "_id"
+    }
+
+}

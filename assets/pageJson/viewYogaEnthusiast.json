@@ -1,0 +1,76 @@
+{
+    "title": "Yoga Enthusiast",
+    "desciption": "",
+    "pageType": "view",
+    "fields": [{
+        "name": "Name",
+        "isSort": "",
+        "tableRef": "name"
+    }, {
+        "name": "Email",
+        "isSort": "",
+        "tableRef": "email"
+    }, {
+        "name": "Address",
+        "isSort": "",
+        "tableRef": "address"
+    }, {
+        "name": "Age",
+        "isSort": "",
+        "tableRef": "age"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editYogaEnthusiast",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "YogaEnthusiast/getOne"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete ",
+        "content": "Are you sure you want to delete tag?",
+        "api": "YogaEnthusiast/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "button": [{
+        "name": "excelexport",
+        "icon": "print",
+        "color": "blue",
+        "action": "excelexport"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+    "excel":[{
+        "name": "excel",
+        "icon": "excel",
+        "color": "green",
+        "title": "Excel",
+        "action": "apiCallConfirm",
+        "api": "YogaEnthusiast/excelDownload"
+    }],
+    "filter": [{
+        "name": "category",
+        "url": "http://chaitalee.com/expertuser/getAll"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+    "apiCall": {
+        "url": "YogaEnthusiast/search",
+        "params": "_id"
+    },
+    "createButtonState": "page({jsonName:'createYogaEnthusiast'})"
+}

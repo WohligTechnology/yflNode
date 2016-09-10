@@ -1,0 +1,353 @@
+{
+    "title": "Edit Restaurant On YFL Details",
+    "jsonPage": "viewRestaurantOnYfl",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "First Name",
+        "type": "text",
+        "model": "firstName",
+        "tableRef": "firstName",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Middle Name",
+        "type": "text",
+        "tableRef": "middleName",
+        "model": "middleName",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Last Name",
+        "type": "text",
+        "tableRef": "lastName",
+        "model": "lastName",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "model": "email",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Mobile Number",
+        "type": "text",
+        "tableRef": "mobileNumber",
+        "model": "mobileNumber",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Land Line Number",
+        "type": "text",
+        "tableRef": "landlineNumber",
+        "model": "landlineNumber",
+        "id": "input6",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Name of the restaurant",
+        "type": "text",
+        "tableRef": "restaurantName",
+        "model": "restaurantName",
+        "id": "input6",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Address",
+        "type": "textarea",
+        "tableRef": "address",
+        "model": "address",
+        "id": "input7",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "City",
+        "type": "text",
+        "tableRef": "city",
+        "model": "city",
+        "id": "input8",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Zipcode",
+        "type": "text",
+        "tableRef": "zipcode",
+        "model": "zipcode",
+        "id": "input9",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "State",
+        "type": "text",
+        "tableRef": "state",
+        "model": "state",
+        "id": "input10",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Country",
+        "type": "text",
+        "tableRef": "country",
+        "model": "country",
+        "id": "input11",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Phone Number(s)",
+        "type": "text",
+        "tableRef": "resPhoneNumbers",
+        "model": "resPhoneNumbers",
+        "id": "input12",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Operations Manager Contact Name",
+        "type": "text",
+        "tableRef": "managerName",
+        "model": "managerName",
+        "id": "input13",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Operations Manager Contact Number",
+        "type": "text",
+        "tableRef": "managerNumber",
+        "model": "managerNumber",
+        "id": "input14",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Timings",
+        "type": "text",
+        "tableRef": "timings",
+        "model": "timings",
+        "id": "input15",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Cuisines (Please list all)",
+        "type": "text",
+        "tableRef": "cuisines",
+        "model": "cuisines",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Average cost for two",
+        "type": "text",
+        "tableRef": "avgCost",
+        "model": "avgCost",
+        "id": "input17",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Home Delivery",
+        "type": "select",
+        "tableRef": "homeDelivery",
+        "model": "homeDelivery",
+        "id": "input18",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Minimum Order for Delivery",
+        "type": "text",
+        "tableRef": "minOrder",
+        "model": "minOrder",
+        "id": "input19",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Dine-in Facility",
+        "type": "select",
+        "tableRef": "dineIn",
+        "model": "dineIn",
+        "id": "input20",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Bar",
+        "type": "select",
+        "tableRef": "bar",
+        "model": "bar",
+        "id": "input21",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Happy Hours",
+        "type": "select",
+        "tableRef": "happyHours",
+        "model": "happyHours",
+        "id": "input22",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Air-conditioned (AC)",
+        "type": "select",
+        "tableRef": "ac",
+        "model": "ac",
+        "id": "input23",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Wifi available",
+        "type": "select",
+        "tableRef": "wifi",
+        "model": "wifi",
+        "id": "input24",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Outdoor dining facility",
+        "type": "select",
+        "tableRef": "outDoorDining",
+        "model": "outDoorDining",
+        "id": "input25",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Live Music",
+        "type": "select",
+        "tableRef": "liveMusic",
+        "model": "liveMusic",
+        "id": "input26",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Pure Vegetarian",
+        "type": "select",
+        "tableRef": "pureVeg",
+        "model": "pureVeg",
+        "id": "input27",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Credit Cards accepted",
+        "type": "select",
+        "tableRef": "creditCard",
+        "model": "creditCard",
+        "id": "input28",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Smoking Area",
+        "type": "select",
+        "tableRef": "smokingArea",
+        "model": "smokingArea",
+        "id": "input29",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }, {
+        "name": "Buffet Details (If any)",
+        "type": "text",
+        "tableRef": "buffetDetails",
+        "model": "buffetDetails",
+        "id": "input30",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Catering Services",
+        "type": "select",
+        "tableRef": "catering",
+        "model": "catering",
+        "id": "input31",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "true",
+            "name": "Yes"
+        }, {
+            "value": "false",
+            "name": "No"
+        }]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitRestaurantOnYfl"
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": "page({jsonName:'viewRestaurantOnYfl'})"
+    }],
+    "apiCall": {
+        "url": "RestaurantOnYfl/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "RestaurantOnYfl/getOne",
+        "params": "_id"
+    }
+
+}

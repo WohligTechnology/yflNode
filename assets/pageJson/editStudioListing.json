@@ -1,0 +1,74 @@
+{
+    "title": "Edit Studio Listing Details",
+    "jsonPage": "viewStudioListing",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "model": "name",
+        "tableRef": "name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Image",
+        "type": "image",
+        "tableRef": "images",
+        "model": "images",
+        "id": "input2",
+        "option":"multiple",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Street",
+        "type": "text",
+        "tableRef": "location.street",
+        "model": "location.street",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "City",
+        "type": "text",
+        "tableRef": "location.city",
+        "model": "location.city",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "State",
+        "type": "text",
+        "tableRef": "location.state",
+        "model": "location.state",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Country",
+        "type": "text",
+        "tableRef": "location.country",
+        "model": "location.country",
+        "id": "input6",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitStudioListing"
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": "page({jsonName:'viewStudioListing'})"
+    }],
+    "apiCall": {
+        "url": "StudioListing/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "StudioListing/getOne",
+        "params": "_id"
+    }
+
+}

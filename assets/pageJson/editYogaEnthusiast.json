@@ -1,0 +1,115 @@
+{
+    "title": "Edit Yoga Enthusiast Details",
+    "jsonPage": "viewYogaEnthusiast",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "model": "name",
+        "tableRef": "name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Address",
+        "type": "textarea",
+        "tableRef": "address",
+        "model": "address",
+        "id": "input7",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+
+    }, {
+        "name": "Present Age",
+        "type": "text",
+        "tableRef": "age",
+        "model": "age",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+
+    }, {
+        "name": "Nationally",
+        "type": "text",
+        "tableRef": "nationally",
+        "model": "nationally",
+        "id": "input8",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "model": "email",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Phome Number",
+        "type": "text",
+        "tableRef": "phoneNumber",
+        "model": "phoneNumber",
+        "id": "input9",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Qualifications",
+        "type": "text",
+        "tableRef": "qualifications",
+        "model": "qualifications",
+        "id": "input11",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Specialisation (Type of Yoga you practice)",
+        "type": "text",
+        "tableRef": "specialisation",
+        "model": "specialisation",
+        "id": "input14",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Briefly mention about your experience in Learning/Teaching Yoga.",
+        "type": "textarea",
+        "tableRef": "expInYoga",
+        "model": "expInYoga",
+        "id": "input18",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "How would you like to contribute/associate with YogaFoodLove?",
+        "type": "text",
+        "tableRef": "contribute",
+        "model": "contribute",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Feedback / Queries",
+        "type": "text",
+        "tableRef": "feedback",
+        "model": "feedback",
+        "id": "input17",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitYogaEnthusiast"
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": "page({jsonName:'viewYogaEnthusiast'})"
+    }],
+    "apiCall": {
+        "url": "YogaEnthusiast/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "YogaEnthusiast/getOne",
+        "params": "_id"
+    }
+
+}

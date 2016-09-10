@@ -1,0 +1,138 @@
+{
+    "title": "Create Nutritionist Collaboration Details",
+    "jsonPage": "viewNutritionistCollaboration",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "First Name",
+        "type": "text",
+        "model": "firstName",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Middle Name",
+        "type": "text",
+        "tableRef": "middleName",
+        "model": "middleName",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Last Name",
+        "type": "text",
+        "tableRef": "lastName",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Mobile Number",
+        "type": "text",
+        "tableRef": "mobileNumber",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Land Line Number",
+        "type": "text",
+        "tableRef": "landlineNumber",
+        "id": "input6",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Address",
+        "type": "textarea",
+        "tableRef": "address",
+        "id": "input7",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "City",
+        "type": "text",
+        "tableRef": "city",
+        "id": "input8",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Zipcode",
+        "type": "text",
+        "tableRef": "zipcode",
+        "id": "input9",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "State",
+        "type": "text",
+        "tableRef": "state",
+        "id": "input10",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Country",
+        "type": "text",
+        "tableRef": "country",
+        "id": "input11",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Educational Qualifications",
+        "type": "text",
+        "tableRef": "qualifications",
+        "id": "input12",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Photocopy of your degree/qualification certificate (Upload)",
+        "type": "image",
+        "tableRef": "qualificationCertificate",
+        "id": "input13",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Any additional certificates you may wish to submit (Upload)",
+        "type": "image",
+        "tableRef": "additionalCertificates",
+        "id": "input14",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Please provide 2 references",
+        "type": "text",
+        "tableRef": "references",
+        "id": "input15",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Please choose how you would like to contribute to YogaFoodLove",
+        "type": "text",
+        "tableRef": "contribute",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Sample articles that you may wish to submit to help your portfolio (Upload)",
+        "type": "image",
+        "tableRef": "sampleArticles",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitNutritionistCollaboration"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewNutritionistCollaboration'})"
+    }],
+
+    "apiCall": {
+        "url": "NutritionistCollaboration/save"
+    }
+}

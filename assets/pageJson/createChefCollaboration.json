@@ -1,0 +1,110 @@
+{
+    "title": "Create Chef Collaboration Details",
+    "jsonPage": "viewChefCollaboration",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "First Name",
+        "type": "text",
+        "tableRef": "firstName",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Middle Name",
+        "type": "text",
+        "tableRef": "middleName",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Last Name",
+        "type": "text",
+        "tableRef": "lastName",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Mobile Number",
+        "type": "text",
+        "tableRef": "mobileNumber",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Professional Experience (In years and months)",
+        "type": "textarea",
+        "tableRef": "professionalExperience",
+        "id": "input7",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Restaurant Name",
+        "type": "text",
+        "tableRef": "restaurantName",
+        "id": "input8",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Restaurant Website",
+        "type": "text",
+        "tableRef": "restaurantWebsite",
+        "id": "input9",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Your hometown",
+        "type": "text",
+        "tableRef": "hometown",
+        "id": "input10",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Link to your best social footprint",
+        "type": "text",
+        "tableRef": "socialFootprint",
+        "id": "input20",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Describe your cooking style",
+        "type": "textarea",
+        "tableRef": "cookingStyle",
+        "model": "cookingStyle",
+        "id": "input12",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Your best cuisine",
+        "type": "text",
+        "tableRef": "cuisine",
+        "id": "input13",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "You would like to collaborate with YogaFoodLove as",
+        "type": "text",
+        "tableRef": "collaborateYfl",
+        "id": "input14",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitChefCollaboration"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewChefCollaboration'})"
+    }],
+
+    "apiCall": {
+        "url": "ChefCollaboration/save"
+    }
+}

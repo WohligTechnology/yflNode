@@ -1,0 +1,161 @@
+{
+    "title": "Edit Foodie Collaboration Details",
+    "jsonPage": "viewFoodieCollaboration",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "First Name",
+        "type": "text",
+        "model": "firstName",
+        "tableRef": "firstName",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Middle Name",
+        "type": "text",
+        "tableRef": "middleName",
+        "model": "middleName",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Last Name",
+        "type": "text",
+        "tableRef": "lastName",
+        "model": "lastName",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "model": "email",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Mobile Number",
+        "type": "text",
+        "tableRef": "mobileNumber",
+        "model": "mobileNumber",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Land Line Number",
+        "type": "text",
+        "tableRef": "landlineNumber",
+        "model": "landlineNumber",
+        "id": "input6",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Address",
+        "type": "textarea",
+        "tableRef": "address",
+        "model": "address",
+        "id": "input7",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "City",
+        "type": "text",
+        "tableRef": "city",
+        "model": "city",
+        "id": "input8",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Zipcode",
+        "type": "text",
+        "tableRef": "zipcode",
+        "model": "zipcode",
+        "id": "input9",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "State",
+        "type": "text",
+        "tableRef": "state",
+        "model": "state",
+        "id": "input10",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Country",
+        "type": "text",
+        "tableRef": "country",
+        "model": "country",
+        "id": "input11",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Professional Experience",
+        "type": "text",
+        "tableRef": "professionalExp",
+        "model": "professionalExp",
+        "id": "input12",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Elaborate your current work responsibilities",
+        "type": "textarea",
+        "tableRef": "workResponsibilites",
+        "model": "workResponsibilites",
+        "id": "input13",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Your favorite drink",
+        "type": "text",
+        "tableRef": "favouriteDrink",
+        "model": "favouriteDrink",
+        "id": "input14",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Link to your best social footprint",
+        "type": "text",
+        "tableRef": "socialFootprint",
+        "model": "socialFootprint",
+        "id": "input15",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "How would you like to contribute to YogaFoodLove?",
+        "type": "text",
+        "tableRef": "contribute",
+        "model": "contribute",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "What makes you unique to collaborate with YogaFoodLove** **(I am a foodie is not an acceptable answer)",
+        "type": "textarea",
+        "tableRef": "makesUnique",
+        "model": "makesUnique",
+        "id": "input17",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitFoodieCollaboration"
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": "page({jsonName:'viewFoodieCollaboration'})"
+    }],
+    "apiCall": {
+        "url": "FoodieCollaboration/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "FoodieCollaboration/getOne",
+        "params": "_id"
+    }
+
+}
