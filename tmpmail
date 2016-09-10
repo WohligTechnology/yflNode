@@ -1,0 +1,26 @@
+<?php
+// $headers = "From: webmaster@example.com" . "\r\n" .
+// "CC: somebodyelse@example.com";
+header('Content-Type: application/json');
+$to = "feedback@bucketmylist.in";
+$email = $_GET['email'];
+$age = $_GET['age'];
+$subject = "Coming Soon Feedback Form";
+$txt = "Age: $age             Email: $email";
+$check = mail($to,$subject,$txt);
+
+	if($check)
+	{
+		$arr = [];
+		$arr["value"]=true;
+		$arr["message"] = "Email sent successfully.";
+		echo json_encode($arr);
+	}
+	else
+	{
+		$arr = [];
+		$arr["value"]=false;
+		$arr["message"] = "Email sending error.";
+		echo json_encode($arr);
+	}
+?>
