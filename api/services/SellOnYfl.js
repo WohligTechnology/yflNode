@@ -18,7 +18,11 @@ var schema = new Schema({
     type : String,
     required : true
   },
-  phoneNumber : {
+  mobileNumber : {
+    type : Number,
+    required : true
+  },
+  landlineNumber : {
     type : Number,
     required : true
   },

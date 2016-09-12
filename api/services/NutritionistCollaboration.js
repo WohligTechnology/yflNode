@@ -39,7 +39,8 @@ var schema = new Schema({
   qualifications: String,
   qualificationCertificate: String,
   additionalCertificates: String,
-  references: String,
+  reference1: String,
+  reference2: String,
   contribute: [String],
   sampleArticles: String,
   termsConditions : Boolean
