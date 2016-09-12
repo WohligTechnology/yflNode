@@ -41,7 +41,8 @@ var schema = new Schema({
   additionalCertificates: String,
   references: String,
   contribute: [String],
-  sampleArticles: String
+  sampleArticles: String,
+  termsConditions : Boolean
 });
 
 schema.plugin(deepPopulate, {});
