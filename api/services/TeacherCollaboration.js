@@ -18,7 +18,9 @@ var schema = new Schema({
     type : String,
     required : true
   },
-  address : String,
+  address1 : String,
+  address2 : String,
+  pincode : Number,
   age : {
     type : Number,
     required : true
@@ -30,31 +32,27 @@ var schema = new Schema({
     unique : true,
     required : true
   },
-  phoneNumber : Number,
-  certifiedYogaTeacher : {
+  mobileNumber : {
+    type : Number,
+    required : true
+  },
+  landlineNumber : Number,
+  organizationName : {
     type : String,
     required : true
   },
-  otherQualifications : {
-    type : String,
+  typeOfYoga : String,
+  amenities  : {
+    type : [String],
     required : true
   },
-  professionalExperience : {
-    type : String,
-    required : true
-  },
-  specialisation : {
-    type : String,
-    required : true
-  },
-  teachingLevel : {
-    type : String,
-    enum : ["Beginner","Intermediate","Advanced","Open level"],
-    required : true
-  },
-  chargePerSession : String,
-  affiliatedStudios : String,
+  styleOfYoga : [String],
+  listTeacher : String,
   expInYoga : String,
+  teachingLevel : {
+    type : [String],
+    required : true
+  },
   officialWebsiteAddress : String,
   facebook : String,
   instagram : String,
@@ -62,15 +60,8 @@ var schema = new Schema({
     type : String,
     required : true
   },
-  usePlatform : {
-    type : Boolean,
-    required : true
-  },
-  freeSchedule : {
-    type : String,
-    required : true
-  },
-  feedback : String
+  listBranches : String,
+  termsConditions : Boolean
 });
 
 schema.plugin(deepPopulate, {});

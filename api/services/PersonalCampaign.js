@@ -29,7 +29,8 @@ var schema = new Schema({
     validate: validators.isLength(10, 12)
   },
   landlineNumber: Number,
-  address: String,
+  address1: String,
+  address2: String,
   city: String,
   zipcode: Number,
   state: String,
@@ -47,7 +48,8 @@ var schema = new Schema({
     type: String,
     enum: ["Myself", "Someone else"]
   },
-  socialFootprint: String
+  socialFootprint: String,
+  termsConditions : Boolean
 });
 
 schema.plugin(deepPopulate, {});
