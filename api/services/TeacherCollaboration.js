@@ -21,10 +21,6 @@ var schema = new Schema({
   address1 : String,
   address2 : String,
   pincode : Number,
-  age : {
-    type : Number,
-    required : true
-  },
   nationally : String,
   email : {
     type : String,
