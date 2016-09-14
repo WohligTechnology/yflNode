@@ -18,9 +18,27 @@ var schema = new Schema({
     type : String,
     required : true
   },
-  address1 : String,
+  country : {
+    type : String,
+    required : true
+  },
+  state: {
+    type : String,
+    required : true
+  },
+  city: {
+    type : String,
+    required : true
+  },
+  pincode : {
+    type : Number,
+    required : true
+  },
+  address1 : {
+    type : String,
+    required : true
+  },
   address2 : String,
-  pincode : Number,
   nationally : String,
   email : {
     type : String,
@@ -40,23 +58,35 @@ var schema = new Schema({
   typeOfYoga : String,
   amenities  : {
     type : [String],
-    required : true
+    required : true,
+    validate : validators.isLength(2, 100)
   },
-  styleOfYoga : [String],
+  styleOfYoga : {
+    type : [String],
+    required : true,
+    validate : validators.isLength(2, 100)
+  },
   listTeacher : String,
   expInYoga : String,
   teachingLevel : {
     type : [String],
+    required : true,
+    validate : validators.isLength(2, 100)
+  },
+  officialWebsiteAddress : {
+    type : String,
     required : true
   },
-  officialWebsiteAddress : String,
   facebook : String,
   instagram : String,
   isActiveSocial : {
     type : String,
     required : true
   },
-  listBranches : String,
+  listBranches : {
+    type : String,
+    required : true
+  },
   termsConditions : Boolean
 });
 

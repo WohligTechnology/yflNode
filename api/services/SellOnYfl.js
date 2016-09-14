@@ -61,9 +61,18 @@ var schema = new Schema({
   isVatCst : Boolean,
 
   // Choose categories you wish to sell
-  booksMoviesGames : [String],
-  clothingShoesJewelry : [String],
-  beautyHealthGroceries : [String],
+  booksMoviesGames : {
+      type : [String],
+      enum : ["Books","Movies","Musical Instruments","Music","Video Games"]
+  },
+  clothingShoesJewelry :{
+      type : [String],
+      enum : ["Clothing","Shoes","Watches","Jewelery","Luggage"]
+  },
+  beautyHealthGroceries : {
+      type : [String],
+      enum : ["Beauty","Grocery","Health","Personal Care Appliances"]
+  },
   yogaProducts : [String],
   other : Boolean,
   productsFrom : [String],
